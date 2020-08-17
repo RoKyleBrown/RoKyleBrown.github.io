@@ -567,6 +567,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     margin-left: calc(1/32 * 100vw);
+    cursor: default;
 }
 
 .contact-r li {
@@ -574,6 +575,11 @@ body {
     font-family: "jose-italic";
     color: white;
     font-size: 1.6vw;
+}
+
+.contact-r li:hover {
+    cursor: pointer;
+    filter: drop-shadow(.5vw .5vw .3vw #222222);
 }
 
 .contact-l {
