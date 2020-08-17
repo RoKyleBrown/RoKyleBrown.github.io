@@ -16,7 +16,7 @@
         
         window.addEventListener( 'scroll', () => {
             getHeight("headshot");
-            getHeight("ballup");
+            getHeightBall("ballup");
             getHeight("resume");
             getHeightR("JS");
             getHeightR("react");
@@ -35,7 +35,7 @@
             getHeightR("ae");
             getHeightR("pr");
             getHeightR("ai");
-            getHeightR("aqua");
+            getHeightRAqua("aqua");
             getHeightEl("how");
             getHeightElR("skills-foot", "skills-action", "skills-line");
             getHeightElR("work-foot", "work-action", "work-line");
@@ -50,7 +50,7 @@
         })
         window.addEventListener( 'resize', () => {
             getHeight("headshot");
-            getHeight("ballup");
+            getHeightBall("ballup");
             getHeight("resume");
             getHeightR("JS");
             getHeightR("react");
@@ -69,11 +69,18 @@
             getHeightR("ae");
             getHeightR("pr");
             getHeightR("ai");
-            getHeightR("aqua");
+            getHeightRAqua("aqua");
             getHeightEl("how");
             getHeightElR("skills-foot", "skills-action", "skills-line");
             getHeightElR("work-foot", "work-action", "work-line");
             getHeightElR("contact-foot", "contact-action", "contact-line");
+            heightWidth('ballup-info', 'ballup');
+            heightWidth('aqua-info', 'aqua');
+        })
+
+        window.addEventListener('load', () => {
+            heightWidth('ballup-info', 'ballup');
+            heightWidth('aqua-info', 'aqua');
         })
 
         function newTab(url) {
@@ -102,7 +109,6 @@
 
             if (titleOffset > elOffset) {
                 oldImg = element.src.slice(0,-4);
-
                      if (oldImg[oldImg.length - 1] !== "b"){
                         element.src = oldImg + "b.jpg";
                      }
@@ -111,6 +117,34 @@
 
                  if (oldImg[oldImg.length - 1] === "b") {
                     element.src = oldImg.slice(0,-1) + ".jpg";
+
+                }
+             }
+        }
+        function getHeightBall(id) {
+            let element = document.getElementById(id);
+            let title = document.getElementById("title");
+
+            let titleOffset = title.getBoundingClientRect().y + 
+            (title.offsetHeight - 15);
+            let elOffset = element.getBoundingClientRect().y;
+            
+           
+            
+            let oldImg = "";
+
+            if (titleOffset > elOffset) {
+                oldImg = element.src.slice(0,-4);
+                     if (oldImg[oldImg.length - 1] !== "b"){
+                        element.src = oldImg + "b.jpg";
+                        $(".ballup-info").addClass("ballup-info-b");
+                     }
+             } else {
+                 oldImg = element.src.slice(0, -4);
+
+                 if (oldImg[oldImg.length - 1] === "b") {
+                    element.src = oldImg.slice(0,-1) + ".jpg";
+                    $(".ballup-info-b").removeClass("ballup-info-b");
                 }
              }
         }
@@ -162,6 +196,34 @@
                 }
              }
         }
+        function getHeightRAqua(id) {
+            let element = document.getElementById(id);
+            let title = document.getElementById("title");
+
+            let titleOffset = title.getBoundingClientRect().y + 
+            (title.offsetHeight);
+            let elOffset = element.getBoundingClientRect().y;
+
+           
+            
+            let oldImg = "";
+
+            if (titleOffset > elOffset) {
+                oldImg = element.src.slice(0,-4);
+
+                     if (oldImg[oldImg.length - 1] !== "b"){
+                        element.src = oldImg + "b.png";
+                        $(".aqua-info").addClass("aqua-info-b");
+                     }
+             } else {
+                 oldImg = element.src.slice(0, -4);
+
+                 if (oldImg[oldImg.length - 1] === "b") {
+                    element.src = oldImg.slice(0,-1) + ".png";
+                    $(".aqua-info-b").removeClass("aqua-info-b");
+                }
+             }
+        }
         function back(id) {
             let element = document.getElementById(id);
             let title = document.getElementById("title");
@@ -204,6 +266,13 @@
                 element3.style.opacity = "100%";
                 element2.style.display = "none";
              }
+        }
+
+        function heightWidth(el, image) {
+            let element = document.getElementById(el);
+            let im = document.getElementById(image);
+            element.style.height = `${im.height}px`;
+            element.style.width = `${im.width}px`;
         }
     </script>
 </head>
@@ -349,12 +418,26 @@
         </div>
         <div class="projects" id="work">
             <div class="pro-left">
-                <img id="ballup" src="ballup1080.png" 
-                onclick="newTab('bit.ly/ball-up')" alt="">
+                <img id="ballup" class="ballup" src="ballup1080.png" >
+                <div class="ballup-info" id="ballup-info"
+                    onclick="newTab('bit.ly/ball-up')" alt="">
+                    <div>
+                        <h3>Ball Up</h3>
+                        <p>Basketball Meetup Application</p>
+                        <p>Built with Mongo DB, Express, React, and Node.</p>
+                    </div>
+                </div>
             </div>
             <div class="pro-right">
-                    <img id="aqua" src="aqua1080.png" 
+                    <img id="aqua" src="aqua1080.png" alt="">
+                    <div class="aqua-info" id="aqua-info" 
                     onclick="newTab('bit.ly/aqua-streaming')" alt="">
+                        <div>
+                            <h3>aqua</h3>
+                            <p>Clone of Hulu Streaming Application</p>
+                            <p>Built with React, Redux, and Rails.</p>
+                        </div>
+                    </div>
             </div>
             <div class="projects-title-contain">
                 <div class="skill-title-contain">
