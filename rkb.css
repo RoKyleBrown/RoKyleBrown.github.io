@@ -498,8 +498,46 @@ body {
     width: 70%;
 }
 
-.pro-left img:hover {
+.ballup-info {
+    position: absolute;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .3s;
+}
+.ballup-info-b {
+    display: none;
+}
+
+.ballup-info div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ballup-info h3 {
+    font-family: helvetica;
+    text-transform: uppercase;
+    font-size: 2.4vw;
+    margin: 0;
+    margin-bottom: 1.4vw;
+}
+
+.ballup-info p {
+    font-family: helvetica;
+    text-transform: uppercase;
+    font-size: 1.1vw;
+    margin: 0;
+    margin-bottom: .8vw;
+}
+
+.ballup-info:hover {
     cursor: pointer;
+    opacity: 97%;
+    transition: .3s;
 }
 
 .pro-right {
@@ -520,8 +558,52 @@ body {
     width: 70%;
 }
 
-.pro-right img:hover {
+/* .pro-right img:hover {
     cursor: pointer;
+} */
+
+.aqua-info {
+    position: absolute;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .3s;
+}
+
+.aqua-info-b {
+    display: none;
+}
+
+.aqua-info div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.aqua-info h3 {
+    font-family: helvetica;
+    text-transform: uppercase;
+    font-size: 2.4vw;
+    margin: 0;
+    margin-bottom: 1.4vw;
+}
+
+.aqua-info p {
+    font-family: helvetica;
+    text-transform: uppercase;
+    font-size: 1.1vw;
+    margin: 0;
+    margin-bottom: .8vw;
+}
+
+.aqua-info:hover {
+    cursor: pointer;
+    opacity: 95%;
+    transition: .3s;
 }
 
 .projects-title-contain {
@@ -622,8 +704,3 @@ body {
     width: 100vw;
     height: 8vw;
 }
-
-
-
-
-
