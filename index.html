@@ -86,10 +86,12 @@
             heightWidth('aqua-info', 'aqua');
 
             let loaded = document.getElementById("loaded");
-            loaded.style.display = "none";
+            // loaded.style.display = "none";
 
             if (document.readyState === 'complete') {
-                loaded.style.display = "block";
+                setTimeout( () => {
+                    loaded.style.display = "block";
+                }, 500)
             }
         })
 
@@ -287,7 +289,7 @@
     </script>
 </head>
 <body> 
-    <div id="loaded" class="loaded" >
+    <div id="loaded" class="loaded" style="display: none;" >
         <div class="hero1">
             <img src="hero1e-5.jpg" alt="">
             <div class="mission" id="mission">
