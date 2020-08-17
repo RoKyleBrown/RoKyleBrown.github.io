@@ -22,6 +22,9 @@
 
 /* Mission */
 
+.loaded-b {
+    display: none;
+}
 
 .hero1 {
     width: 100vw;

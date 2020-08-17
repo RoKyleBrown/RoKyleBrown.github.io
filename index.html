@@ -47,6 +47,9 @@
             back("git");
             back("in");
             back("angel");
+
+            
+            
         })
         window.addEventListener( 'resize', () => {
             getHeight("headshot");
@@ -81,6 +84,13 @@
         window.addEventListener('load', () => {
             heightWidth('ballup-info', 'ballup');
             heightWidth('aqua-info', 'aqua');
+
+            let loaded = document.getElementById("loaded");
+            loaded.style.display = "none";
+
+            if (document.readyState === 'complete') {
+                loaded.style.display = "block";
+            }
         })
 
         function newTab(url) {
@@ -277,217 +287,218 @@
     </script>
 </head>
 <body> 
-    
-    <div class="hero1">
-        <img src="hero1e-5.jpg" alt="">
-        <div class="mission" id="mission">
-            <div>
-                <!-- <h3 class="rkb">———</h3> -->
-            </div>
-
-            <div class="logo">
-                <div class="logo-strip">
-                    <!-- <img src="server.png" alt=""> -->
-                    <img src="rkb-pixels.jpg" alt="">
-                    <!-- <img src="database.png" alt=""> -->
-                </div>
-                <h3
-                    style="margin-top: 0;"
-                >-_-_-_-_</h3>
-            </div>
-            <p>The pursuit of excellence at every level of the stack --
-                down to the ones and zeros.
-            </p>
-            
-        </div>
-        <div class="title-contain">
-            
-        </div>
-        <div class="respect">
-            <p>#RespectTheOnesAndZeros</p>
-        </div>
-    </div>
-    <div>
-        
-        <div class="title" id="title">
-            <div class="title-font">
-                <p onclick="scrollMe('mission')" >Robert Kyle Brown</p>
-            </div>
-            <div class="nav">
+    <div id="loaded" class="loaded" >
+        <div class="hero1">
+            <img src="hero1e-5.jpg" alt="">
+            <div class="mission" id="mission">
                 <div>
-                    <p id="skills-action" onclick="scrollMe('skills')">
-                        <span id="div-line">| </span> skills</p>
-                    <p id="work-action" onclick="scrollMe('work')">
-                        <span id="div-line">| </span> my work</p>
-                    <p id="contact-action" onclick="scrollMe('contact')">
-                        <span id="div-line">| </span> contact me</p>
+                    <!-- <h3 class="rkb">———</h3> -->
                 </div>
+
+                <div class="logo">
+                    <div class="logo-strip">
+                        <!-- <img src="server.png" alt=""> -->
+                        <img src="rkb-pixels.jpg" alt="">
+                        <!-- <img src="database.png" alt=""> -->
+                    </div>
+                    <h3
+                        style="margin-top: 0;"
+                    >-_-_-_-_</h3>
+                </div>
+                <p>The pursuit of excellence at every level of the stack --
+                    down to the ones and zeros.
+                </p>
+                
+            </div>
+            <div class="title-contain">
+                
+            </div>
+            <div class="respect">
+                <p>#RespectTheOnesAndZeros</p>
             </div>
         </div>
-        <div class="skills" id="skills">
-            <div class="hero2-contain">
-                <img src="hero2-3.jpg" alt="">
-                <div class="skill-content">
-                    <div class="skill-left">
-                        <div class="headshot" >
-                            <img id="headshot" src="headshot.jpg" alt="" >
-                            <div id="skill-how-contain">
-                                <div id="skill-how">
-                                    <p id="how" class="how"><span class="p-a"> I have experience 
-                                        <span class="b-a">with</span> high-level languages, 
-                                        <span class="b-a">content</span> creation, 
-                                        <span class="b-a">and</span> a degree 
-                                        <span class="b-a">in</span> computer engineering.
-                                    </span></p>
+        <div>
+            
+            <div class="title" id="title">
+                <div class="title-font">
+                    <p onclick="scrollMe('mission')" >Robert Kyle Brown</p>
+                </div>
+                <div class="nav">
+                    <div>
+                        <p id="skills-action" onclick="scrollMe('skills')">
+                            <span id="div-line">| </span> skills</p>
+                        <p id="work-action" onclick="scrollMe('work')">
+                            <span id="div-line">| </span> my work</p>
+                        <p id="contact-action" onclick="scrollMe('contact')">
+                            <span id="div-line">| </span> contact me</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills" id="skills">
+                <div class="hero2-contain">
+                    <img src="hero2-3.jpg" alt="">
+                    <div class="skill-content">
+                        <div class="skill-left">
+                            <div class="headshot" >
+                                <img id="headshot" src="headshot.jpg" alt="" >
+                                <div id="skill-how-contain">
+                                    <div id="skill-how">
+                                        <p id="how" class="how"><span class="p-a"> I have experience 
+                                            <span class="b-a">with</span> high-level languages, 
+                                            <span class="b-a">content</span> creation, 
+                                            <span class="b-a">and</span> a degree 
+                                            <span class="b-a">in</span> computer engineering.
+                                        </span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-right" >
+                            <div class="skill-icons">
+                                <ul>
+                                    <li><img id="JS" src="JS.png" alt=""></li> <!--JavaScript-->
+                                    -<li><img id="react" src="react.png" alt=""></li>-<!--React.js-->
+                                    -<li><img id="redux" src="redux.png" alt=""></li><!--Redux-->
+                                </ul>
+                                <ul>
+                                    <li><img id="jquery" src="jquery.png" alt=""></li><!--jQuery-->
+                                    -<li><img id="ruby" src="ruby.png" alt=""></li>-<!--Ruby-->
+                                    <li><img id="rails" src="rails.png" alt=""></li><!--Rails-->
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <div class="sql">
+                                            <div>
+                                                <img id="mysql" src="mysql.png" alt="">
+                                            </div>
+                                            <div>
+                                                <img id="postgres"  src="posrtgresql.png" alt="">
+                                            </div>
+                                        </div>
+                                    </li><!--SQL-->
+                                    -<li><img id="mongo" src="mongoDB.png" alt=""></li>-<!--NoSQL-->
+                                    <li>
+                                        <div class="c-program">
+                                            <div>
+                                                <img id="c-program" src="c-programming.png" alt="">
+                                            </div>
+                                            <div>
+                                                <img id="c++" src="c++.png" alt="">
+                                            </div>
+                                        </div>
+                                    </li><!--C/C++-->
+                                </ul>
+                                <ul>
+                                    <li><img id="compE" src="computerengineering.png" alt=""></li><!--Low Level Computing-->
+                                    -<li><img id="content" src="ContentCreation.png" alt=""></li>-<!--Content Creation-->
+                                    <li>
+                                        <div class="adobe">
+                                            <div class="top">
+                                                <div>
+                                                    <img id="ps" src="photoshop.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <img id="ae" src="aftereffects.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="bottom">
+                                                <div>
+                                                    <img id="pr" src="premiere.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <img id="ai" src="illustrator.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!--Adobe Creative Suite-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-title-contain">
+                        <div class="mod-title-contain" id="hello">
+                            <h3 class="mod-title" id="skills-foot"  >SKILLS</h3>
+                            <div id="skills-line" class="underline">
+                                <div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="skill-right" >
-                        <div class="skill-icons">
-                            <ul>
-                                <li><img id="JS" src="JS.png" alt=""></li> <!--JavaScript-->
-                                -<li><img id="react" src="react.png" alt=""></li>-<!--React.js-->
-                                -<li><img id="redux" src="redux.png" alt=""></li><!--Redux-->
-                            </ul>
-                            <ul>
-                                <li><img id="jquery" src="jquery.png" alt=""></li><!--jQuery-->
-                                -<li><img id="ruby" src="ruby.png" alt=""></li>-<!--Ruby-->
-                                <li><img id="rails" src="rails.png" alt=""></li><!--Rails-->
-                            </ul>
-                            <ul>
-                                <li>
-                                    <div class="sql">
-                                        <div>
-                                            <img id="mysql" src="mysql.png" alt="">
-                                        </div>
-                                        <div>
-                                            <img id="postgres"  src="posrtgresql.png" alt="">
-                                        </div>
-                                    </div>
-                                </li><!--SQL-->
-                                -<li><img id="mongo" src="mongoDB.png" alt=""></li>-<!--NoSQL-->
-                                <li>
-                                    <div class="c-program">
-                                        <div>
-                                            <img id="c-program" src="c-programming.png" alt="">
-                                        </div>
-                                        <div>
-                                            <img id="c++" src="c++.png" alt="">
-                                        </div>
-                                    </div>
-                                </li><!--C/C++-->
-                            </ul>
-                            <ul>
-                                <li><img id="compE" src="computerengineering.png" alt=""></li><!--Low Level Computing-->
-                                -<li><img id="content" src="ContentCreation.png" alt=""></li>-<!--Content Creation-->
-                                <li>
-                                    <div class="adobe">
-                                        <div class="top">
-                                            <div>
-                                                <img id="ps" src="photoshop.png" alt="">
-                                            </div>
-                                            <div>
-                                                <img id="ae" src="aftereffects.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="bottom">
-                                            <div>
-                                                <img id="pr" src="premiere.png" alt="">
-                                            </div>
-                                            <div>
-                                                <img id="ai" src="illustrator.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li><!--Adobe Creative Suite-->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-title-contain">
-                    <div class="mod-title-contain" id="hello">
-                        <h3 class="mod-title" id="skills-foot"  >SKILLS</h3>
-                        <div id="skills-line" class="underline">
-                            <div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
-        <div class="projects" id="work">
-            <div class="pro-left">
-                <img id="ballup" class="ballup" src="ballup1080.png" >
-                <div class="ballup-info" id="ballup-info"
-                    onclick="newTab('bit.ly/ball-up')" alt="">
-                    <div>
-                        <h3>Ball Up</h3>
-                        <p>Basketball Meetup Application</p>
-                        <p>Built with Mongo DB, Express, React, and Node.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pro-right">
-                    <img id="aqua" src="aqua1080.png" alt="">
-                    <div class="aqua-info" id="aqua-info" 
-                    onclick="newTab('bit.ly/aqua-streaming')" alt="">
+            <div class="projects" id="work">
+                <div class="pro-left">
+                    <img id="ballup" class="ballup" src="ballup1080.png" >
+                    <div class="ballup-info" id="ballup-info"
+                        onclick="newTab('bit.ly/ball-up')" alt="">
                         <div>
-                            <h3>aqua</h3>
-                            <p>Clone of Hulu Streaming Application</p>
-                            <p>Built with React, Redux, and Rails.</p>
+                            <h3>Ball Up</h3>
+                            <p>Basketball Meetup Application</p>
+                            <p>Built with Mongo DB, Express, React, and Node.</p>
                         </div>
                     </div>
-            </div>
-            <div class="projects-title-contain">
-                <div class="skill-title-contain">
-                    <div class="mod-title-contain">
-                        <h3 class="mod-title" id="work-foot" >MY WORK</h3>
-                        <div id="work-line" class="underline">
+                </div>
+                <div class="pro-right">
+                        <img id="aqua" src="aqua1080.png" alt="">
+                        <div class="aqua-info" id="aqua-info" 
+                        onclick="newTab('bit.ly/aqua-streaming')" alt="">
                             <div>
-                
+                                <h3>aqua</h3>
+                                <p>Clone of Hulu Streaming Application</p>
+                                <p>Built with React, Redux, and Rails.</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="projects-title-contain">
+                    <div class="skill-title-contain">
+                        <div class="mod-title-contain">
+                            <h3 class="mod-title" id="work-foot" >MY WORK</h3>
+                            <div id="work-line" class="underline">
+                                <div>
+                    
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="code-back">
+                    <img src="project-back3.png" alt="">
+                </div>
             </div>
-            <div class="code-back">
-                <img src="project-back3.png" alt="">
-            </div>
-        </div>
-        <div class="contact" id="contact">
-            <div class="contact-l">
-                <img id="resume" onclick="newTab('bit.ly/rkb-resume')"
-                    src="Resume2020.jpg" alt="">
-            </div>
-            <div class="contact-r">
-                <ul>
-                    <li id="email" onclick="emailTo('mailto:r.kyle.brown@gmail.com')">
-                        Email : R.Kyle.Brown@gmail.com</li>
-                    <li id="git" onclick="newTab('github.com/RoKyleBrown/')" >GitHub : RoKyleBrown</li>
-                    <li id="in" onclick="newTab('bit.ly/kb-in')" >LinkedIn : Robert Kyle Brown</li>
-                    <li id="angel" onclick="newTab('bit.ly/kb-angel')">AngeList : RoKyleBrown</li>
-                </ul>
-            </div>
-            <div class="contact-title-contain">
-                <div class="skill-title-contain">
-                    <div class="mod-title-contain">
-                        <h3 class="mod-title" id="contact-foot">CONTACT ME</h3>
-                        <div id="contact-line" class="underline">
-                            <div>
-                
+            <div class="contact" id="contact">
+                <div class="contact-l">
+                    <img id="resume" onclick="newTab('bit.ly/rkb-resume')"
+                        src="Resume2020.jpg" alt="">
+                </div>
+                <div class="contact-r">
+                    <ul>
+                        <li id="email" onclick="emailTo('mailto:r.kyle.brown@gmail.com')">
+                            Email : R.Kyle.Brown@gmail.com</li>
+                        <li id="git" onclick="newTab('github.com/RoKyleBrown/')" >GitHub : RoKyleBrown</li>
+                        <li id="in" onclick="newTab('bit.ly/kb-in')" >LinkedIn : Robert Kyle Brown</li>
+                        <li id="angel" onclick="newTab('bit.ly/kb-angel')">AngeList : RoKyleBrown</li>
+                    </ul>
+                </div>
+                <div class="contact-title-contain">
+                    <div class="skill-title-contain">
+                        <div class="mod-title-contain">
+                            <h3 class="mod-title" id="contact-foot">CONTACT ME</h3>
+                            <div id="contact-line" class="underline">
+                                <div>
+                    
+                                </div>
                             </div>
                         </div>
+                        <div class="house-back">
+                            <img src="trail-4.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="house-back">
-                        <img src="trail-4.jpg" alt="">
                     </div>
-                </div>
                 </div>
             </div>
-        </div>
-        <div class="foot">
-        
+            <div class="foot">
+            
+            </div>
         </div>
     </div>
 </body>
