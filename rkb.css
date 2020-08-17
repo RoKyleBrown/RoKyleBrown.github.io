@@ -678,6 +678,7 @@ body {
 .contact-l img {
     margin-right: calc(1/16 * 100vw);
     height: 70%;
+    max-height: 40vw;
 }
 
 .contact-l img:hover {
