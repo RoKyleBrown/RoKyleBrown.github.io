@@ -82,17 +82,17 @@
         })
 
         window.addEventListener('load', () => {
-            heightWidth('ballup-info', 'ballup');
-            heightWidth('aqua-info', 'aqua');
-
             let loaded = document.getElementById("loaded");
             // loaded.style.display = "none";
 
             if (document.readyState === 'complete') {
-                setTimeout( () => {
+                setTimeout(() => {
                     loaded.style.display = "block";
+                    heightWidth('ballup-info', 'ballup');
+                    heightWidth('aqua-info', 'aqua');
                 }, 500)
             }
+
         })
 
         function newTab(url) {
