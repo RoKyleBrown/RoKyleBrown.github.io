@@ -83,14 +83,15 @@
 
         window.addEventListener('load', () => {
             let loaded = document.getElementById("loaded");
-            // loaded.style.display = "none";
+            let gif = document.getElementById("RKB-container");
 
             if (document.readyState === 'complete') {
                 setTimeout(() => {
                     loaded.style.display = "block";
+                    gif.style.display = "none";
                     heightWidth('ballup-info', 'ballup');
                     heightWidth('aqua-info', 'aqua');
-                }, 500)
+                }, 800)
             }
 
         })
@@ -289,6 +290,11 @@
     </script>
 </head>
 <body> 
+    <div id="RKB-container">
+        <div class="RKB">
+            
+        </div>
+    </div>
     <div id="loaded" class="loaded" style="display: none;" >
         <div class="hero1">
             <img src="hero1e-5.jpg" alt="">
