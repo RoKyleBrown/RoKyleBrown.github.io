@@ -315,8 +315,16 @@
         function heightWidth(el, image) {
             let element = document.getElementById(el);
             let im = document.getElementById(image);
-            element.style.height = `${im.height}px`;
-            element.style.width = `${im.width}px`;
+
+            let ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf('safari') != -1) {
+                if (ua.indexOf('chrome') > -1) {
+                    element.style.height = `${im.height}px`;
+                    element.style.width = `${im.width}px`;
+                } else {
+                    element.style.opacity = "0";
+                }
+            }
         }
 
         function isInViewport(element) {
