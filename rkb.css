@@ -29,12 +29,9 @@
 }
 
 .RKB {
-    background-image: url("RKB-lines.gif");
-    background-size: contain;
-    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
-    box-shadow: 0 0 1.7vw 1.7vw #7a6e65 inset;
+    /* box-shadow: 0 0 1.7vw 1.7vw #7a6e65 inset; */
 }
 
 /* .RKB img {
