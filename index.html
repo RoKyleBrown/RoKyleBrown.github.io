@@ -326,6 +326,11 @@
                 } else {
                     element.style.opacity = "0";
                 }
+            } else if (ua.indexOf('firefox') > -1) {
+                element.style.height = `${im.height}px`;
+                element.style.width = `${im.width}px`;
+            } else {
+                element.style.opacity = "0";
             }
         }
 
