@@ -727,3 +727,16 @@ body {
     width: 100vw;
     height: 8vw;
 }
+
+#social {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: inherit;
+    width: 100%;
+}
+
+#social img {
+    width: 2.5vw;
+    margin: 0 0 1vw 1vw;
+}
