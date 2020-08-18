@@ -47,8 +47,7 @@
             back("git");
             back("in");
             back("angel");
-
-            
+            isInViewport("hero2");
             
         })
         window.addEventListener( 'resize', () => {
@@ -79,6 +78,7 @@
             getHeightElR("contact-foot", "contact-action", "contact-line");
             heightWidth('ballup-info', 'ballup');
             heightWidth('aqua-info', 'aqua');
+            isInViewport("hero2");
         })
 
         window.addEventListener('load', () => {
@@ -118,12 +118,13 @@
                     setTimeout(() => {
                         mission.style.opacity = "100%";
                     }, 1009)
+
                     setTimeout(() => {
                         nav.style.opacity = "100%";
+                        isInViewport("hero2");
                     }, 1300)
                 }
             }
-
         })
 
         function newTab(url) {
@@ -317,6 +318,18 @@
             element.style.height = `${im.height}px`;
             element.style.width = `${im.width}px`;
         }
+
+        function isInViewport(element) {
+            let el = document.getElementById(element);
+
+            let hero2 = el.getBoundingClientRect();
+            if ((hero2.bottom - (hero2.height*.3)) <= (window.innerHeight || 
+            document.documentElement.clientHeight)){
+                el.src = "hero2-3.jpg";
+            } else {
+                el.src = "hero2-0.jpg";
+            }
+        }
     </script>
 </head>
 <body> 
@@ -373,7 +386,7 @@
             </div>
             <div class="skills" id="skills">
                 <div class="hero2-contain">
-                    <img src="hero2-3.jpg" alt="">
+                    <img src="hero2-0.jpg" alt="" id="hero2">
                     <div class="skill-content">
                         <div class="skill-left">
                             <div class="headshot" >
