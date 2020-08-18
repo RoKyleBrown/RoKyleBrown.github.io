@@ -84,6 +84,9 @@
         window.addEventListener('load', () => {
             let loaded = document.getElementById("loaded");
             let gif = document.getElementById("RKB-container");
+            let hero1 = document.getElementById("hero1");
+            let mission = document.getElementById("mission");
+            let nav = document.getElementById("nav");
 
             if (document.readyState === 'complete') {
                 setTimeout(() => {
@@ -91,7 +94,34 @@
                     gif.style.display = "none";
                     heightWidth('ballup-info', 'ballup');
                     heightWidth('aqua-info', 'aqua');
-                }, 800)
+                }, 850)
+
+                if (document.readyState === 'complete') {
+                    setTimeout(() => {
+                        hero1.src = "hero1e-1.jpg";
+                            setTimeout(() => {
+                                hero1.src = "hero1e-2.jpg";
+                                    setTimeout(() => {
+                                    hero1.src = "hero1e-3.jpg";
+                                        setTimeout(() => {
+                                            hero1.src = "hero1e-4.jpg";
+                                                setTimeout(() => {
+                                                    hero1.src = "hero1e-5.jpg";
+                                                }, 50)
+                                        }, 50)
+                                }, 100)
+                        }, 100)
+                    }, 800)
+                }
+
+                if (document.readyState === 'complete') {
+                    setTimeout(() => {
+                        mission.style.opacity = "100%";
+                    }, 1009)
+                    setTimeout(() => {
+                        nav.style.opacity = "100%";
+                    }, 1300)
+                }
             }
 
         })
@@ -297,10 +327,9 @@
     </div>
     <div id="loaded" class="loaded" style="display: none;" >
         <div class="hero1">
-            <img src="hero1e-5.jpg" alt="">
-            <div class="mission" id="mission">
+            <img id="hero1" src="hero1e-0.jpg" alt="">
+            <div class="mission" id="mission" style="opacity: 0;">
                 <div>
-                    <!-- <h3 class="rkb">———</h3> -->
                 </div>
 
                 <div class="logo">
@@ -331,7 +360,7 @@
                 <div class="title-font">
                     <p onclick="scrollMe('mission')" >Robert Kyle Brown</p>
                 </div>
-                <div class="nav">
+                <div class="nav" id="nav" style="opacity: 0;">
                     <div>
                         <p id="skills-action" onclick="scrollMe('skills')">
                             <span id="div-line">| </span> skills</p>
