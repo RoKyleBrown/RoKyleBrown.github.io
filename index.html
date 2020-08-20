@@ -8,11 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RKB</title>
     <script>
-        // window.addEventListener( 'scroll', () => {
-        //     getHeight("headshot");
-        //     getHeight("ballup");
-        //     getHeight("resume");
-        // })
         
         window.addEventListener( 'scroll', () => {
             getHeight("headshot");
@@ -87,7 +82,10 @@
             let hero1 = document.getElementById("hero1");
             let mission = document.getElementById("mission");
             let nav = document.getElementById("nav");
-            let profile = document.getElementById("headshot")
+            let profile = document.getElementById("headshot");
+            let skills = document.getElementById("skills");
+            let projects = document.getElementById("projects");
+            let contact = document.getElementById("contact")
 
             if (document.readyState === 'complete') {
                 setTimeout(() => {
@@ -109,6 +107,9 @@
                                                 setTimeout(() => {
                                                     hero1.src = "hero1e-5.jpg";
                                                     profile.style.opacity = "100%";
+                                                    work.style.opacity = "100%";
+                                                    contact.style.opacity = "100%";
+                                                    skills.style.opacity = "100%";
                                                 }, 50)
                                         }, 50)
                                 }, 100)
@@ -494,7 +495,7 @@
                     </div>
                 </div>
             </div>
-            <div class="projects" id="work">
+            <div class="projects" id="work" style="opacity: 0;">
                 <div class="pro-left">
                     <img id="ballup" class="ballup" src="ballup1080.png" >
                     <div class="ballup-info" id="ballup-info"
@@ -533,7 +534,7 @@
                     <img src="project-back3.png" >
                 </div>
             </div>
-            <div class="contact" id="contact">
+            <div class="contact" id="contact" style="opacity: 0;">
                 <div class="contact-l">
                     <img id="resume" onclick="newTab('bit.ly/rkb-resume')"
                         src="Resume2020.jpg" alt="">
