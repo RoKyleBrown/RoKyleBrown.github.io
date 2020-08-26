@@ -88,6 +88,8 @@
             let contact = document.getElementById("contact");
             let title = document.getElementById("title");
 
+            if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+
             if (document.readyState === 'complete') {
                 setTimeout(() => {
                     loaded.style.display = "block";
@@ -136,7 +138,7 @@
                         isInViewport("hero2");
                     }, 1700)
                 }
-            }
+            } }
         })
 
         function newTab(url) {
