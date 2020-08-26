@@ -77,6 +77,8 @@
         })
 
         window.addEventListener('load', () => {
+            if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+                
             let loaded = document.getElementById("loaded");
             let gif = document.getElementById("RKB-container");
             let hero1 = document.getElementById("hero1");
@@ -88,7 +90,6 @@
             let contact = document.getElementById("contact");
             let title = document.getElementById("title");
 
-            if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
 
             if (document.readyState === 'complete') {
                 setTimeout(() => {
