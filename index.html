@@ -76,71 +76,72 @@
             isInViewport("hero2");
         })
 
-        // window.addEventListener('load', () => {
-        //     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+        window.addEventListener('load', () => {
+                
+            let loaded = document.getElementById("loaded");
+            let gif = document.getElementById("RKB-container");
+            let hero1 = document.getElementById("hero1");
+            let mission = document.getElementById("mission");
+            let nav = document.getElementById("nav");
+            let profile = document.getElementById("headshot");
+            let skills = document.getElementById("skills");
+            let projects = document.getElementById("projects");
+            let contact = document.getElementById("contact");
+            let title = document.getElementById("title");
 
-        //     let loaded = document.getElementById("loaded");
-        //     let gif = document.getElementById("RKB-container");
-        //     let hero1 = document.getElementById("hero1");
-        //     let mission = document.getElementById("mission");
-        //     let nav = document.getElementById("nav");
-        //     let profile = document.getElementById("headshot");
-        //     let skills = document.getElementById("skills");
-        //     let projects = document.getElementById("projects");
-        //     let contact = document.getElementById("contact");
-        //     let title = document.getElementById("title");
 
+            if (document.readyState === 'complete') {
+                setTimeout(() => {
+                    loaded.style.display = "block";
+                    gif.style.display = "none";
+                    heightWidth('ballup-info', 'ballup');
+                    heightWidth('aqua-info', 'aqua');
+                }, 850)
 
-        //     if (document.readyState === 'complete') {
-        //         setTimeout(() => {
-        //             loaded.style.display = "block";
-        //             gif.style.display = "none";
-        //             heightWidth('ballup-info', 'ballup');
-        //             heightWidth('aqua-info', 'aqua');
-        //         }, 850)
+if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
 
-        //         if (document.readyState === 'complete') {
-        //             setTimeout(() => {
-        //                 hero1.src = "hero1e-1.jpg";
-        //                     setTimeout(() => {
-        //                         hero1.src = "hero1e-2.jpg";
+                if (document.readyState === 'complete') {
+                    setTimeout(() => {
+                        hero1.src = "hero1e-1.jpg";
+                            setTimeout(() => {
+                                hero1.src = "hero1e-2.jpg";
                                  
-        //                             setTimeout(() => {
-        //                             hero1.src = "hero1e-3.jpg";
-        //                                 setTimeout(() => {
-        //                                     hero1.src = "hero1e-4.jpg";
-        //                                         setTimeout(() => {
-        //                                             hero1.src = "hero1e-5.jpg";
+                                    setTimeout(() => {
+                                    hero1.src = "hero1e-3.jpg";
+                                        setTimeout(() => {
+                                            hero1.src = "hero1e-4.jpg";
+                                                setTimeout(() => {
+                                                    hero1.src = "hero1e-5.jpg";
                                                     
-        //                                         }, 50)
-        //                                 }, 50)
-        //                         }, 100)
-        //                 }, 100)
-        //             }, 800)
-        //         }
+                                                }, 50)
+                                        }, 50)
+                                }, 100)
+                        }, 100)
+                    }, 800)
+                }
 
-        //         if (document.readyState === 'complete') {
-        //             setTimeout( () => {
-        //                 title.style.opacity = "100%";
-        //                 profile.style.opacity = "100%";
-        //                 work.style.opacity = "100%";
-        //                 contact.style.opacity = "100%";
-        //                 skills.style.opacity = "100%";
-        //             }, 1350)
-        //         }
+                if (document.readyState === 'complete') {
+                    setTimeout( () => {
+                        title.style.opacity = "100%";
+                        profile.style.opacity = "100%";
+                        work.style.opacity = "100%";
+                        contact.style.opacity = "100%";
+                        skills.style.opacity = "100%";
+                    }, 1350)
+                }
 
-        //         if (document.readyState === 'complete') {
-        //             setTimeout(() => {
-        //                 mission.style.opacity = "100%";
-        //             }, 1009)
+                if (document.readyState === 'complete') {
+                    setTimeout(() => {
+                        mission.style.opacity = "100%";
+                    }, 1009)
 
-        //             setTimeout(() => {
-        //                 nav.style.opacity = "100%";
-        //                 isInViewport("hero2");
-        //             }, 1700)
-        //         }
-        //     } }
-        // })
+                    setTimeout(() => {
+                        nav.style.opacity = "100%";
+                        isInViewport("hero2");
+                    }, 1700)
+                }
+            } }
+        })
 
         function newTab(url) {
             window.open(`https://${url}`, '_blank');
