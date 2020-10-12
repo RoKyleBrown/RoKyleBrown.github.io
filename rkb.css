@@ -728,7 +728,7 @@ body {
     height: 8vw;
 }
 
-#social {
+#social { 
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
