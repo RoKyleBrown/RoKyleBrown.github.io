@@ -729,7 +729,7 @@ body {
 }
 
 #social { 
-    display: flex;
+    display: flex; 
     justify-content: flex-start;
     align-items: flex-end;
     height: inherit;
