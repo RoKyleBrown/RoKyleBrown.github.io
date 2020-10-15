@@ -731,7 +731,7 @@ body {
 #social { 
     display: flex; 
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: flex-end; 
     height: inherit;
     width: 100%;
 }
