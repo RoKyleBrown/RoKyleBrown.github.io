@@ -503,12 +503,13 @@ body {
 }
 
 .pro-left {
-    width: 50%;
+    width: 33.3%;
     /* background-color: skyblue; */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 5vw;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 1;
 }
 
@@ -551,9 +552,11 @@ body {
 .ballup-info p {
     font-family: helvetica;
     text-transform: uppercase;
-    font-size: 1.1vw;
+    font-size: 1vw;
     margin: 0;
     margin-bottom: .8vw;
+    text-align: center;
+    width: 90%;
 }
 
 .ballup-info:hover {
@@ -563,12 +566,13 @@ body {
 }
 
 .pro-right {
-    width: 50%;
+    width: 33.3%;
     /* background-color: thistle; */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 5vw;
+    margin-right: auto;
+    margin-left: auto;
     z-index: 1;
 }
 
@@ -617,9 +621,11 @@ body {
 .aqua-info p {
     font-family: helvetica;
     text-transform: uppercase;
-    font-size: 1.1vw;
+    font-size: 1vw;
     margin: 0;
     margin-bottom: .8vw;
+    text-align: center;
+    width: 90%;
 }
 
 .aqua-info:hover {
@@ -628,12 +634,19 @@ body {
     transition: .3s;
 }
 
+.dogpound-info {
+    background-color: white;
+}
+
+.dogpound-info div {
+    color: black;
+}
+
 .projects-title-contain {
     height: inherit;
     width: 87.8%;
     position: absolute;
     pointer-events: none;
-    /* background-color: #2b150a; */
     z-index: 1;
 }
 

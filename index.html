@@ -31,6 +31,7 @@
             getHeightR("pr");
             getHeightR("ai");
             getHeightRAqua("aqua");
+            getHeightRDog("dogpound");
             getHeightEl("how");
             getHeightElR("skills-foot", "skills-action", "skills-line");
             getHeightElR("work-foot", "work-action", "work-line");
@@ -67,12 +68,14 @@
             getHeightR("pr");
             getHeightR("ai");
             getHeightRAqua("aqua");
+            getHeightRDog("dogpound");
             getHeightEl("how");
             getHeightElR("skills-foot", "skills-action", "skills-line");
             getHeightElR("work-foot", "work-action", "work-line");
             getHeightElR("contact-foot", "contact-action", "contact-line");
             heightWidth('ballup-info', 'ballup');
             heightWidth('aqua-info', 'aqua');
+            heightWidth('dogpound-info', 'dogpound');
             isInViewport("hero2");
         })
 
@@ -98,7 +101,6 @@
                 work.style.opacity = "0%";
                 contact.style.opacity = "0%";
                 skills.style.opacity = "0%";
-                // mission.style.opacity = "0%";
                 nav.style.opacity = "0%";
 
                 if (document.readyState === 'complete') {
@@ -107,6 +109,7 @@
                         gif.style.display = "none";
                         heightWidth('ballup-info', 'ballup');
                         heightWidth('aqua-info', 'aqua');
+                        heightWidth('dogpound-info', 'dogpound');
                     }, 850)
 
                     if (document.readyState === 'complete') {
@@ -292,6 +295,34 @@
                  if (oldImg[oldImg.length - 1] === "b") {
                     element.src = oldImg.slice(0,-1) + ".png";
                     $(".aqua-info-b").removeClass("aqua-info-b");
+                }
+             }
+        }
+        function getHeightRDog(id) {
+            let element = document.getElementById(id);
+            let title = document.getElementById("title");
+
+            let titleOffset = title.getBoundingClientRect().y + 
+            (title.offsetHeight);
+            let elOffset = element.getBoundingClientRect().y;
+
+           
+            
+            let oldImg = "";
+
+            if (titleOffset > elOffset) {
+                oldImg = element.src.slice(0,-4);
+
+                     if (oldImg[oldImg.length - 1] !== "b"){
+                        element.src = oldImg + "b.png";
+                        $(".dogpound-info").addClass("dogpound-info-b");
+                     }
+             } else {
+                 oldImg = element.src.slice(0, -4);
+
+                 if (oldImg[oldImg.length - 1] === "b") {
+                    element.src = oldImg.slice(0,-1) + ".png";
+                    $(".dogpound-info-b").removeClass("dogpound-info-b");
                 }
              }
         }
@@ -537,8 +568,19 @@
                         onclick="newTab('bit.ly/aqua-streaming')" alt="">
                             <div>
                                 <h3>aqua</h3>
-                                <p>Clone of Hulu Streaming Application</p>
+                                <p>Clone of Hulu Application</p>
                                 <p>Built with React, Redux, and Rails.</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="pro-right">
+                        <img id="dogpound" src="dogpound1080.png" alt="">
+                        <div class="aqua-info dogpound-info" id="dogpound-info" 
+                        onclick="newTab('bit.ly/dogpound-app')" alt="">
+                            <div>
+                                <h3>dogpound</h3>
+                                <p>Front End application using Dog CEO API</p>
+                                <p>Built with React hooks and Redux.</p>
                             </div>
                         </div>
                 </div>
